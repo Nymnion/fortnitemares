@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnitemares - NYMN</title>
     <style>
+        html, body {
+            height: 100%; /* Ensures full height for background coverage */
+        }
         body {
             background: linear-gradient(to bottom, #2a003e, #4b0082); /* Smooth transition without resetting */
             background-attachment: fixed; /* Make the gradient scale with the browser height */
@@ -12,6 +15,7 @@
             font-family: 'Poppins', sans-serif; /* Bold and modern font */
             margin: 0;
             padding: 0;
+            min-height: 100vh; /* Ensure the body always takes at least the full viewport height */
         }
         .container {
             width: 80%;
