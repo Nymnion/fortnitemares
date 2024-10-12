@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnitemares - NYMN</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2a003e, #4b0082); /* Smooth transition without resetting */
+            background-attachment: fixed; /* Make the gradient scale with the browser height */
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif; /* Bold and modern font */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 250px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #00cccc; /* Teal color */
+            font-size: 1.5em; /* Smaller size */
+        }
+        .faq {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .faq-item {
+            background-color: #4a0070; /* Slightly brighter purple */
+            color: #ffffff;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid #ffffff; /* Thin white line between each segment */
+        }
+        .faq-item h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item .icon {
+            font-size: 1.5em;
+            color: #00cccc; /* Teal color */
+        }
+        .faq-item p {
+            display: none;
+            padding-top: 10px;
+        }
+        .faq-item + .faq-item {
+            border-top: 1px solid #ffffff; /* Add a white line between each FAQ segment */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/oWyeqQR.png" alt="Nymn Logo">
+        <h1>Use creator code "NYMN"!</h1>
+        
+        <div class="faq">
+            <div class="faq-item">
+                <h3>HOW DOES THE EXTENSION WORK?<span class="icon">+</span></h3>
+                <p>This extension is a part of Fortnite Battle Royale’s Fortnitemares 2024. Viewers who enable the Fortnitemares Twitch extension will be offered to link their Epic and Twitch accounts in order to participate in the extension's interactive elements. With the extension enabled on your stream, your viewers will see puzzle pieces randomly appear on the stream. Users can catch these puzzle pieces to complete their collection. When a user completes the puzzle, they’ll earn the Carver's Challenge loading screen in Fortnite. The same puzzle piece can be collected multiple times. Viewers with a large puzzle piece collection may see their names on the leaderboard for the participating channel they’re currently watching and globally across Twitch.</p>
+                <p>When your community has collected enough puzzle pieces, you'll be able to choose another participating Twitch channel from this panel to "take over." When a channel is under a takeover, its stream will be raided with a fury of pumpkins!</p>
+                <p>When the extension is enabled on your channel, you can be taken over by other channels. The extension will send relevant messages in your chat to notify users that new puzzle pieces will appear soon.</p>
+            </div>
+            <div class="faq-item">
+                <h3>HOW DO TAKEOVERS WORK?<span class="icon">+</span></h3>
+                <p>When your channel has collected enough puzzle pieces, you can take over another channel that is currently active. The taken over channel will have a bunch of pumpkins appearing on its stream. The community of the taken over channel can stop the takeover by spamming the <3 emote in the chat. If a threshold is reached, the channel takeover is ended. The Fortnite takeover progress is displayed on the stream.</p>
+            </div>
+            <div class="faq-item">
+                <h3>HOW MANY PUZZLE PIECES DOES A CHANNEL'S COMMUNITY NEED TO COLLECT FOR CREATORS TO START A TAKEOVER?<span class="icon">+</span></h3>
+                <p>You can track the progress towards the next takeover using the progress bar at the bottom of the extension and in this panel. When the milestone is reached, you'll see a selection of live channels that have the extension enabled. Choose one to take over, then after the takeover is finished, your community can continue collecting puzzle pieces to take over the next channel.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('p');
+                const icon = item.querySelector('.icon');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
